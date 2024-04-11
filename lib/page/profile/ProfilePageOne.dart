@@ -18,8 +18,8 @@ const photos = [
 class Photo {
   Photo({this.path, this.isImage});
 
-  final String path;
-  final bool isImage;
+  final String? path;
+  final bool? isImage;
 }
 
 class ProfilePageOne extends StatefulWidget {

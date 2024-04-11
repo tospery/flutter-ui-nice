@@ -63,20 +63,20 @@ class MenuController {
 
   Stream<List<Menu>> get menuItems => controller.stream;
 
-  MenuController({List<Menu> menus}) {
+  MenuController({List<Menu>? menus}) {
     controller.add(menus ?? _defaultMenus());
   }
 
   static String _title(index) {
-    return _MENU_STRINGS[index % _MENU_STRINGS.length]['title'];
+    return _MENU_STRINGS[index % _MENU_STRINGS.length]['title'] as String;
   }
 
   static List<String> _items(index) {
-    return _MENU_STRINGS[index % _MENU_STRINGS.length]['items'];
+    return _MENU_STRINGS[index % _MENU_STRINGS.length]['items'] as List<String>;
   }
 
   List<Menu> _defaultMenus() {
-    var list = List<Menu>();
+    var list = <Menu>[];
     for (int i = 0; i < _MENU_STRINGS.length; i++) {
       list.add(Menu(
           title: _title(i),

@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
       title: StringConst.APP_NAME,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: BLUE_DEEP,
-        accentColor: YELLOW,
+        hintColor: YELLOW,
         fontFamily: "Montserrat",
       ),
       home: HomePage(),

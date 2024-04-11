@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_nice/page/navigation/navigation1/widgets/button.dart';
 
 class MenuButtons extends StatelessWidget {
-	MenuButtons({this.onHomePressed, this.onChatPressed, this.onFeedPressed, this.onProfilePressed, this
+	MenuButtons({required this.onHomePressed, required this.onChatPressed, required this.onFeedPressed, required this.onProfilePressed, required this
 			.onSettingsPressed});
 	final VoidCallback onHomePressed;
 	final VoidCallback onChatPressed;
@@ -10,7 +10,7 @@ class MenuButtons extends StatelessWidget {
 	final VoidCallback onProfilePressed;
 	final VoidCallback onSettingsPressed;
 
-	List<Widget> _allButtons({int notifications}) => [
+	List<Widget> _allButtons({int? notifications}) => [
 		Padding(
 		  padding: const EdgeInsets.only(left: 10.0, right: 30.0, bottom: 20.0),
 		  child: Button.home(onHomePressed),

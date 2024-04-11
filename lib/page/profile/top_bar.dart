@@ -16,11 +16,11 @@ class TopBar extends StatelessWidget {
       this.onLeftIconPressed,
       this.onRightIconPressed});
 
-  final String leftIcon;
-  final String rightIcon;
-  final String title;
-  final Function() onLeftIconPressed;
-  final Function() onRightIconPressed;
+  final String? leftIcon;
+  final String? rightIcon;
+  final String? title;
+  final Function()? onLeftIconPressed;
+  final Function()? onRightIconPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class TopBar extends StatelessWidget {
     if (leftIcon != null) {
       icons.add(InkWell(
         onTap: onLeftIconPressed,
-        child: Image.asset(leftIcon,
+        child: Image.asset(leftIcon ?? "",
             width: SizeUtil.getAxisY(CIRCLE_BUTTON_HEIGHT),
             height: SizeUtil.getAxisY(CIRCLE_BUTTON_HEIGHT)),
       ));
@@ -36,7 +36,7 @@ class TopBar extends StatelessWidget {
     if (rightIcon != null) {
       icons.add(InkWell(
         onTap: onRightIconPressed,
-        child: Image.asset(rightIcon,
+        child: Image.asset(rightIcon ?? "",
             width: SizeUtil.getAxisY(CIRCLE_BUTTON_HEIGHT),
             height: SizeUtil.getAxisY(CIRCLE_BUTTON_HEIGHT)),
       ));
@@ -57,7 +57,7 @@ class TopBar extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: SizeUtil.getAxisY(30.0)),
               child: Text(
-                this.title.toUpperCase(),
+                this.title?.toUpperCase() ?? "",
                 style: TextStyle(
                     color: TEXT_BLACK,
                     fontSize: SizeUtil.getAxisBoth(TEXT_SIZE_L),

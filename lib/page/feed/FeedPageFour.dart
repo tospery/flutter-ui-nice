@@ -132,7 +132,7 @@ class _FeedPageFourState extends State<FeedPageFour> {
         width: double.infinity,
         margin: EdgeInsets.all(20),
         child: Text(
-          cardConsts[0]['time'],
+          cardConsts[0]['time'] as String,
           textAlign: TextAlign.right,
           style: TextStyle(
               color: Colors.black38,
@@ -151,7 +151,7 @@ class _FeedPageFourState extends State<FeedPageFour> {
                   color: TEXT_BLACK),
               children: <TextSpan>[
                 TextSpan(
-                    text: cardConsts[0]['action'],
+                    text: cardConsts[0]['action'] as String,
                     style: TextStyle(
                         fontWeight: FontWeight.normal, color: TEXT_BLACK_LIGHT))
               ]),
@@ -179,9 +179,9 @@ class _FeedPageFourState extends State<FeedPageFour> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          _socialAction(favIcon, cardConsts[0]['like']),
-          _socialAction(chatIcon, cardConsts[0]['chat']),
-          _socialAction(shareIcon, cardConsts[0]['share'])
+          _socialAction(favIcon, cardConsts[0]['like'] as String),
+          _socialAction(chatIcon, cardConsts[0]['chat'] as String),
+          _socialAction(shareIcon, cardConsts[0]['share'] as String)
         ],
       ),
     );
@@ -222,7 +222,7 @@ class _FeedPageFourState extends State<FeedPageFour> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7),
             image: DecorationImage(
-                image: AssetImage(cardConsts[0]['avatar_image'])),
+                image: AssetImage(cardConsts[0]['avatar_image'] as String)),
             boxShadow: SHADOW,
           ),
         ));

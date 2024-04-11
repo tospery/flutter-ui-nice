@@ -10,8 +10,8 @@ class NavigationOneCoordinator extends StatefulWidget {
 }
 
 class _Coordinator extends State<NavigationOneCoordinator> with TickerProviderStateMixin {
-	AnimationController _controller;
-	HomePageAnimator _animator;
+	late AnimationController _controller;
+	late HomePageAnimator _animator;
 
 	@override
   void initState() {

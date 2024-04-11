@@ -100,7 +100,7 @@ class _FeedState extends State<FeedPageOne> {
                         style: Theme.of(context)
                             .textTheme
                             .headline6
-                            .copyWith(color: Colors.white)),
+                            ?.copyWith(color: Colors.white)),
                   ),
                 )),
             Positioned(

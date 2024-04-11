@@ -338,7 +338,7 @@ class _FeedThreeState extends State<FeedThreePage> {
                           horizontal: SizeUtil.getAxisX(134),
                           vertical: SizeUtil.getAxisY(54)),
                       child: Text(
-                        contents[index]["time"],
+                        contents[index]["time"] as String,
                         style: TextStyle(
                             fontSize: SizeUtil.getAxisBoth(26),
                             fontWeight: FontWeight.w700),

@@ -3,7 +3,7 @@ import 'package:flutter_ui_nice/const/color_const.dart';
 
 class BackgroundCommon extends StatelessWidget {
 
-	BackgroundCommon({this.child, Key key}) : super(key: key);
+	BackgroundCommon({required this.child, Key? key}) : super(key: key);
 	final Widget child;
 
 	@override

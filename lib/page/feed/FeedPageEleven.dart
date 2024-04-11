@@ -16,7 +16,7 @@ class FeedPageEleven extends StatefulWidget {
 
 class _FeedState extends State<FeedPageEleven>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
+  late TabController tabController;
   var curTab = 0;
 
   void initState() {
